@@ -1,0 +1,40 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #f5f8fb;
+  border-bottom: 1px solid #ddd;
+}
+.header-title {
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 35px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-shadow: #345b95 1px 0 7px;
+  color: #345b95;
+}
+
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+
+.header-button {
+  background: linear-gradient(0.95turn, #345b95, #89a6c5);
+  color: white;
+  padding: 10px 16px;
+  text-decoration: none; 
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-button:hover {
+  background: linear-gradient(0.95turn, #2c4a7a, #7d98b5);
+}

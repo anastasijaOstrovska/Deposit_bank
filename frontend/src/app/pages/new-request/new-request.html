@@ -1,0 +1,57 @@
+
+  <div class="form-container">  
+    <form (ngSubmit)="onSubmit()" #depositForm="ngForm" class="new-request-form">
+          <h2>New Deposit Request</h2>
+
+          <div *ngIf="generalError" class="error">{{ generalError }}</div>
+          <div *ngIf="customerIDError" class="error">{{ customerIDError }}</div>
+          <div *ngIf="depositAmountError" class="error">{{ depositAmountError }}</div>
+          <div *ngIf="termError" class="error">{{ termError }}</div>
+
+          <div class="form-group">
+            <div class="tooltip-wrapper">
+              <label for="customerID">Customer ID:</label>
+              <input id="customerID" name="customerID" type="text" [(ngModel)]="deposit.customerID" required />
+              <span class="tooltip-text">Customer ID must be exactly 7 digits <br> and cannot start with 0</span>
+            </div>
+          </div>
+
+          <label for="customerName">Customer Name:</label>
+          <input type="text" id="customerName" name="customerName" [(ngModel)]="deposit.customerName" required />
+          
+          <div class="form-group">
+            <div class="tooltip-wrapper">
+              <label for="depositAmount">Deposit Amount:</label>
+              <input type="number" min="1000" step="0.01" id="depositAmount" [(ngModel)]="deposit.depositAmount" name="depositAmount" required />
+              <span class="tooltip-text">Minimum deposit is 1000</span>
+            </div>
+          </div>
+          
+          <label for="currency">Currency:</label>
+          <select id="currency" name="currency" [(ngModel)]="deposit.currency" required>
+            <option value="">Select Currency</option>
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+          </select>
+
+          <div class="form-group">
+            <div class="tooltip-wrapper">
+              <label for="term">Term:</label>
+              <select id="term" name="term" [(ngModel)]="deposit.term" required>
+                <option value="">Select Term</option>
+                <option value="1">1 Month</option>
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="12">1 Year</option>
+                <option value="24">2 Years</option>
+                <option value="36">3 Years</option>
+              </select>
+              <div class="tooltip-text">EUR: from 1 month. USD: from 3 months.</div>
+            </div>
+          </div>
+
+          <button type="submit">Create Request</button>
+        </form>
+
+  </div>
+  <router-outlet />

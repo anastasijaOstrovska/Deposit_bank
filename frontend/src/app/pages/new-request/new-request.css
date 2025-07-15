@@ -1,0 +1,134 @@
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding: 3rem 1rem 1rem;
+  box-sizing: border-box; 
+}
+
+.new-request-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.new-request-form label {
+  margin-bottom: 6px;
+  color: #345b95;
+  font-weight: normal;
+}
+.new-request-form h2 {
+  margin-bottom: 6px;
+  font-size: 25px;
+  color: #345b95;
+  font-weight: normal;
+}
+
+.new-request-form select {
+  appearance: none; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin-bottom: 6px; 
+  padding: 10px;
+  font-size: 14px;
+  color: #345b95;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='12' height='12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23333' d='M2 4l4 4 4-4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px;
+}
+
+.new-request-form select:focus {
+  border-color: #425db4;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(63, 92, 122, 0.2);
+}
+
+
+.new-request-form input {
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.new-request-form button {
+  padding: 10px;
+  background-color: #345b95ca;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.new-request-form button:hover {
+  background-color: #345b95;
+}
+
+.error {
+  color: #d93025;           
+  background-color: #fce8e6;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin: 5px auto;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  display: block; 
+  box-shadow: 0 1px 3px rgba(217, 48, 37, 0.3);
+  max-width: 350px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.tooltip-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+input {
+  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.tooltip-text {
+  position: absolute;
+  top: 20px;
+  left: 100%;
+  margin-left: 8px;
+  background-color: #345b95;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.tooltip-wrapper select:focus + .tooltip-text,
+.tooltip-wrapper input:focus + .tooltip-text {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+

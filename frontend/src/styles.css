@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  margin-left: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0.95turn,  #345b95, #7a9bbe, #345b95);
+  margin: 0;
+  padding: 0;
+  display: block; 
+
+}
